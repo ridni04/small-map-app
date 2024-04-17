@@ -27,10 +27,6 @@ components:
       type: Button
       layout_properties: {row: EJWPGO, width_xs: 4, col_xs: 4}
       event_bindings: {click: disappearBtn_click}
-    - name: map_1
-      properties: {height: 391}
-      type: GoogleMap
-      layout_properties: {row: EHFOUX, width_xs: 12, col_xs: 0}
     - name: left_btn
       properties: {text: '', icon: 'fa:arrow-circle-o-left'}
       type: Button
@@ -76,6 +72,10 @@ components:
       type: Button
       layout_properties: {row: RPVPPY, width_xs: 1, col_xs: 11}
       event_bindings: {click: signBtn_click}
+    - name: map_1
+      properties: {height: 391}
+      type: GoogleMap
+      layout_properties: {row: YGBGAQ, width_xs: 12, col_xs: 0}
   - name: column_panel_2
     properties: {}
     type: ColumnPanel
