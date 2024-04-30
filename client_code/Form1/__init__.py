@@ -13,7 +13,10 @@ class Form1(Form1Template):
     # self.youtube_video_1.youtube_id = 'FALlhXl6CmA'
     # Any code you write here will run before the form opens.
     self.count_click = 0
-    self.disappearBtn.text='Make the map disappear!'
+    def button_1_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        alert("Baby Bevo wasn't a regular Bevo. He was a little squishmallow Bevo. But this Squishmallow Bevo had dreams. He wanted to go to the top of UT Tower! But Baby Bevo wasn't allowed in the tower, so Baby Bevo decided to go up all the buildings on Campus!")
+
     
     self.map_1.center = GoogleMap.LatLng(30.286376,-97.737654)
     self.map_1.zoom = 15
