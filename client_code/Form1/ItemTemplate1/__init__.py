@@ -12,3 +12,4 @@ class ItemTemplate1(ItemTemplate1Template):
 
     # Any code you write here will run before the form opens.
     self.label_1.text = self.item['Signer'] + ' signed my wall on ' +str(self.item['When'])
+    self.label_2.text = self.item['Comments']

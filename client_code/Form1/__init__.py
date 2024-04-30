@@ -13,16 +13,12 @@ class Form1(Form1Template):
     # self.youtube_video_1.youtube_id = 'FALlhXl6CmA'
     # Any code you write here will run before the form opens.
     self.count_click = 0
-    def button_1_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        alert("Baby Bevo wasn't a regular Bevo. He was a little squishmallow Bevo. But this Squishmallow Bevo had dreams. He wanted to go to the top of UT Tower! But Baby Bevo wasn't allowed in the tower, so Baby Bevo decided to go up all the buildings on Campus!")
-
-    
-    self.map_1.center = GoogleMap.LatLng(30.286376,-97.737654)
-    self.map_1.zoom = 15
+  
+    self.map_1.center = GoogleMap.LatLng(30.285257089684773, -97.73679600611173)
+    self.map_1.zoom = 18
     self.map_1.clickable_icons=False
     self.map_1.fullscreen_control=False
-
+  
     pins = tables.app_tables.locations.search()
     self.markerList = []
     ind = 0
@@ -32,10 +28,10 @@ class Form1(Form1Template):
       self.markerList[ind].add_event_handler('click',self.marker_click)
       self.map_1.add_component(self.markerList[ind])
       ind += 1
-
-    # wall stuff
-    self.load_wall()
-    self.drop_down_1.items = [('Hello',1),('There',2)]
+  
+      # wall stuff
+      #self.load_wall()
+      #self.drop_down_1.items = [('Hello',1),('There',2)]
 
   def marker_click(self, sender, **properties):
     self.infoAbtPin.visible=True
@@ -49,6 +45,7 @@ class Form1(Form1Template):
     
     self.image_1.visible=True
     self.pictures = tables.app_tables.images.search(Location=sender.tag)
+    self.location = sender.tag
     self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['Image']
 
     
@@ -67,14 +64,13 @@ class Form1(Form1Template):
       self.wallLbl.visible=True
       self.repeating_panel_1.visible=True
       now = datetime.datetime.now()
-      tables.app_tables.wall.add_row(Signer=self.text_box_1.text.strip(),When=now)
-      self.text_box_1.text=''
+      tables.app_tables.wall.add_row(Signer=self.text_box_1.text.strip(),When=now, Location = self.location, Comments = self.text_box_2.text.strip())
       self.load_wall()
     else:
       alert('You cannot sign without a name!')
 
   def load_wall(self):
-    wall = tables.app_tables.wall.search()
+    wall = tables.app_tables.wall.search(Location = self.location)
     if len(wall) == 0:
       self.wallLbl.visible=False
       self.repeating_panel_1.visible=False
@@ -84,6 +80,8 @@ class Form1(Form1Template):
       self.repeating_panel_1.items=[w for w in wall]
 
   def right_btn_click(self, **event_args):
+    self.count_click += 1
+    self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['Image']
     # write some python code for what happens when this button is clicked
     # go to the next picture
     pass
@@ -98,3 +96,5 @@ class Form1(Form1Template):
   def map_1_bounds_changed(self, **event_args):
     """This method is called when the viewport bounds have changed."""
     pass
+
+
