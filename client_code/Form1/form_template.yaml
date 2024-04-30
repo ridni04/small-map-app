@@ -81,9 +81,10 @@ components:
       layout_properties: {row: RPVPPY, width_xs: 1, col_xs: 11}
       event_bindings: {click: signBtn_click}
     - name: map_1
-      properties: {height: 391}
+      properties: {height: 391, map_type_control: false}
       type: GoogleMap
       layout_properties: {row: YGBGAQ, width_xs: 12, col_xs: 0}
+      event_bindings: {bounds_changed: map_1_bounds_changed}
     - name: column_panel_2
       properties: {}
       type: ColumnPanel

@@ -94,3 +94,7 @@ class Form1(Form1Template):
 
   def drop_down_1_change(self, **event_args):
     self.image_1.source = self.pictures[self.drop_down_1.selected_value % len(self.pictures)]['Image']
+
+  def map_1_bounds_changed(self, **event_args):
+    """This method is called when the viewport bounds have changed."""
+    pass
