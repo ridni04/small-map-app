@@ -97,4 +97,11 @@ class Form1(Form1Template):
     """This method is called when the viewport bounds have changed."""
     pass
 
+  def outlined_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.outlined_button_1.text = "Baby Bevo wasn't a regular Bevo. He was a little squishmallow Bevo."
+  def button_1_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        alert("This Squishmallow Bevo had dreams. He wanted to go to the top of UT Tower! But Baby Bevo wasn't allowed in the tower, so Baby Bevo decided to go up all the buildings on Campus!")
+
 
