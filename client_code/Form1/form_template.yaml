@@ -25,7 +25,6 @@ components:
       event_bindings: {click: outlined_button_1_click}
       data_bindings:
       - {property: background, code: 'self.item[''blue'']', writeback: false}
-      - {property: font, code: 'self.item['''']', writeback: false}
     - name: button_1
       properties: {text: 'Where is Baby Bevo Going?'}
       type: Button

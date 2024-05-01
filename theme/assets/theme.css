@@ -1049,3 +1049,9 @@ div.plot-container.plotly svg.main-svg {
 body {
   background-color: orange;
 }
+}
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
