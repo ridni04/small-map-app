@@ -19,7 +19,7 @@ components:
       type: Label
       layout_properties: {row: IJWOTP, width_xs: 12, col_xs: 0}
     - name: outlined_button_1
-      properties: {text: What is a 'Baby Bevo", role: outlined-button}
+      properties: {text: What is a 'Baby Bevo", role: outlined-button, foreground: ''}
       type: Button
       layout_properties: {row: QHBEGM, width_xs: 12, col_xs: 0}
       event_bindings: {click: outlined_button_1_click}

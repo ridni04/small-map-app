@@ -10,6 +10,7 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.outlined_button_1.background = 'lightblue'
     # self.youtube_video_1.youtube_id = 'FALlhXl6CmA'
     # Any code you write here will run before the form opens.
     self.count_click = 0
@@ -99,6 +100,7 @@ class Form1(Form1Template):
 
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
+    self.outlined_button_1.background = 'lightblue'
     self.outlined_button_1.text = "Baby Bevo wasn't a regular Bevo. He was a little squishmallow Bevo."
   def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
