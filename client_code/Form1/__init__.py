@@ -64,9 +64,9 @@ class Form1(Form1Template):
             self.repeating_panel_1.items = wall
 
     def right_btn_click(self, **event_args):
-     self.count_click += 1
-    self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['Image'] if len(self.pictures) > 0 else None
-    # Other code (if any) goes here
+        self.count_click += 1
+        self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['Image'] if len(self.pictures) > 0 else None
+
     pass
 
     def left_btn_click(self, **event_args):
@@ -90,8 +90,8 @@ class Form1(Form1Template):
 
     def signBtn_click(self, **event_args
         # Code to execute when signBtn is clicked or enter is pressed in text_box_1
-
+        pass
 
     # Make sure to bind the event handler to the signBtn and text_box_1
-      self.signBtn.set_event_handler('click', self.signBtn_click)
-      self.text_box_1.set_event_handler('pressed_enter', self.signBtn_click)
+    self.signBtn.set_event_handler('click', self.signBtn_click)
+    self.text_box_1.set_event_handler('pressed_enter', self.signBtn_click)
