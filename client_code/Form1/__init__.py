@@ -1,5 +1,6 @@
 from ._anvil_designer import Form1Template
 from anvil import *
+import plotly.graph_objects as go
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -82,7 +83,7 @@ class Form1(Form1Template):
     self.count_click -= 1
     self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['Image']
 
-  def drop_down_1_change(self, **event_args):
+  def drop_down_2_change(self, **event_args):
     self.image_1.source = self.pictures[self.drop_down_1.selected_value % len(self.pictures)]['Image']
 
   def map_1_bounds_changed(self, **event_args):
@@ -100,6 +101,5 @@ class Form1(Form1Template):
   def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
         alert("Baby Bevo wasn't a regular Bevo. He was a little squishmallow Bevo.")
-        self.drop_down_1.items = [(row["name"], row) for row in app_tables.categories.search()]
-
+  
 
