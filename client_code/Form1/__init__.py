@@ -60,7 +60,6 @@ class Form1(Form1Template):
       self.load_wall()
     else:
       alert('You cannot sign without a name!')
-      self.call_js('PlaySound')
 
   def load_wall(self):
     wall = tables.app_tables.wall.search(Location = self.location)
@@ -75,25 +74,20 @@ class Form1(Form1Template):
   def right_btn_click(self, **event_args):
     self.count_click += 1
     self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['Image']
-    # write some python code for what happens when this button is clicked
-    # go to the next picture
-    pass
 
   def left_btn_click(self, **event_args):
     self.count_click -= 1
     self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['Image']
 
-  def drop_down_2_change(self, **event_args):
-    self.image_1.source = self.pictures[self.drop_down_1.selected_value % len(self.pictures)]['Image']
 
   def map_1_bounds_changed(self, **event_args):
     """This method is called when the viewport bounds have changed."""
-    pass
 
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.outlined_button_1.background = 'lightblue'
     self.outlined_button_1.text = "Baby Bevo wasn't a regular Bevo. He was a little squishmallow Bevo."
+
   def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         alert("This Squishmallow Bevo had dreams. He wanted to go to the top of UT Tower! But Baby Bevo wasn't allowed in the tower, so Baby Bevo decided to go up all the buildings on Campus!")
