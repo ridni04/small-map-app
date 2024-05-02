@@ -1050,8 +1050,11 @@ body {
   background-color: orange;
 }
 }
-.cedarville-cursive-regular {
-  font-family: "Cedarville Cursive", cursive;
-  font-weight: 400;
-  font-style: normal;
+/* Typography */
+body {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 14px;
+  line-height: 1.4286;
+  background-color: #fafafa;
 }
+outlined_button_1.style = "font-family: 'Cedarville Cursive', cursive;"
