@@ -52,7 +52,7 @@ class Form1(Form1Template):
     
 
   def disappearBtn_click(self, **event_args):
-    if self.map_1.visible == True:
+    if self.map_1.visible is True:
       self.map_1.visible = False
       self.disappearBtn.text='Make the map appear!'
       open_form('Form2')
@@ -65,7 +65,7 @@ class Form1(Form1Template):
       self.wallLbl.visible=True
       self.repeating_panel_1.visible=True
       now = datetime.datetime.now()
-      tables.app_tables.wall.add_row(Signer=self.text_box_1.text.strip(),When=now, Location = self.location, Comments = self.text_box_2.text.strip())
+      tables.app_tables.wall.add_row(Signer=self.text_box_1.text.strip(),When=now, Location = self.location, Message = self.text_box_2.text.strip())
       self.load_wall()
     else:
       alert('You cannot sign without a name!')
