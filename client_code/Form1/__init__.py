@@ -8,6 +8,7 @@ from anvil.tables import app_tables
 import datetime
 from anvil import Button, Image
 
+
 class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -53,8 +54,14 @@ class Form1(Form1Template):
 
     self.infoAbtPin.text += '\nThis pin\'s location is '+str(sender.tag['Lat'])+' North, '+str(sender.tag['Lon']) + ' West'
     self.infoAbtPin.text += '\nIt is called ' + sender.tag['Name']
-    
+
+    self.image_1.source = sender.tag['Image']
     self.image_1.visible=True
+    default_image_row = app_tables.images.get(image_url=sender.tag['Image'])
+    if default_image_row:
+            self.label_8.text = default_image_row['Caption']
+    else:
+            self.label_8.text = 'No caption available'
     self.pictures = tables.app_tables.images.search(Location=sender.tag)
     self.location = sender.tag
     self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['Image']
@@ -107,13 +114,14 @@ class Form1(Form1Template):
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.image_4.source = image_source_1
-    self.image_4.visible = True
+    self.image_3.source = image_source_1
+    self.image_3.visible = True
 
   def button_4_click(self, **event_args):
-     self.image_4.source = image_source_2
-     self.image_4.visible = True
-     self.image_1.visible = False
+     self.image_3.source = image_source_2
+     self.image_3.visible = True
+     
+    
   def form_show(self, **event_args):
     # Set the minimum and maximum values of the slider
     self.slider_1.min = 0
@@ -133,25 +141,29 @@ class Form1(Form1Template):
     slider_value = self.slider_1.value
     
     # Reset visibility of images and labels
-    self.image_4.visible = False
-    self.image_a.visible = False
-    self.image_6.visible = False
-    self.label_4_im.text = ""
-    self.label_a_im.text = ""
-    self.label_6_im.text = ""
+    self.image_m.visible = False
+    self.image_n.visible = False
+    self.image_v.visible = False
+    self.label_m.text = ""
+    self.label_n.text = ""
+    self.label_v.text = ""
     
     # Determine the visibility based on the slider's value
     if slider_value > 30:
-        self.image_4.source = '_/theme/hen.gif'
-        self.image_4.visible = True
-        self.label_4_im.text = "Thanks"
+        self.image_m.source = '_/theme/hen.gif'
+        self.image_m.visible = True
+        self.label_m.text = "Thanks"
       
         
+    if slider_value > 60:  # Replace with the value you choose
+        self.image_n.source = '_/theme/hen2.gif'
+        self.image_n.visible = True
+        self.label_n.text = "For"
+        
     if slider_value > 90:  # Replace with the value you choose
-        self.image_6.source = '_/theme/hen4.gif'
-        self.image_6.visible = True
-        self.label_6_im.text = "Coming"
-
+        self.image_v.source = '_/theme/hen4.gif'
+        self.image_v.visible = True
+        self.label_v.text = "Coming"
    
 def change_image(self):
     """This method is called when the button is clicked"""
@@ -160,4 +172,11 @@ def change_image(self):
 image_source_1 = "_/theme/giphy.gif"
 image_source_2 = "_/theme/tenor.gif" 
 image_source_3 = "_/theme/hen.gif" 
+# In server code
 
+def get_caption_for_image(image_url):
+    # Assuming 'images' is the name of your Data Table
+    # and 'caption' is the name of the column containing captions
+    return app_tables.images.get(image_url=image_url)['caption']
+
+# Server-side
