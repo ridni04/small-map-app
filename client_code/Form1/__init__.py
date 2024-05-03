@@ -113,6 +113,10 @@ class Form1(Form1Template):
   def button_4_click(self, **event_args):
      self.image_4.source = image_source_2
      self.image_4.visible = True
+        self.image_1.visible = False
+  def slider_1_change(self, handle, **event_args):
+    """This method is called when the slider has finished sliding"""
+    pass
   
 
     

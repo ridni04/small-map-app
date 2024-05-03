@@ -122,6 +122,20 @@ components:
       properties: {height: 295.99993896484375}
       type: Image
       layout_properties: {row: CZSRBL, width_xs: 6, col_xs: 3}
+    - name: rich_text_1
+      properties: {content: Thanks for coming! Scroll to the end for a surprise!,
+        align: center}
+      type: RichText
+      layout_properties: {row: STMYRF, width_xs: 5, col_xs: 4}
+    - name: slider_1
+      properties: {}
+      type: form:dep_1bbojh6tx9f61:Slider
+      layout_properties: {row: DADPNZ, width_xs: 12, col_xs: 0}
+      event_bindings: {change: slider_1_change}
+    - name: image_3
+      properties: {height: 252.6666259765625}
+      type: Image
+      layout_properties: {row: LSBMHP, width_xs: 3, col_xs: 5}
     - name: column_panel_2
       properties: {}
       type: ColumnPanel
