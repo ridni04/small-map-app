@@ -15,7 +15,7 @@ components:
   - name: grid_panel_1
     properties: {}
     type: GridPanel
-    layout_properties: {grid_position: 'VSBPEI,UIVDSI'}
+    layout_properties: {grid_position: 'VSBPEI,WWXVEA'}
     components:
     - name: welcomeLbl
       properties: {text: BABY BEVO'S SKY HIGH ADVENTURE, font_size: 22, align: center,
@@ -144,6 +144,18 @@ components:
       properties: {height: 255.333251953125}
       type: Image
       layout_properties: {row: LSBMHP, width_xs: 3, col_xs: 8}
+    - name: label_4_im
+      properties: {align: center}
+      type: Label
+      layout_properties: {row: SMHWUH, width_xs: 3, col_xs: 2}
+    - name: label_2
+      properties: {align: center}
+      type: Label
+      layout_properties: {row: SMHWUH, width_xs: 3, col_xs: 5}
+    - name: label_5
+      properties: {align: center}
+      type: Label
+      layout_properties: {row: SMHWUH, width_xs: 3, col_xs: 8}
     - name: column_panel_2
       properties: {}
       type: ColumnPanel

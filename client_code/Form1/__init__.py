@@ -114,6 +114,43 @@ class Form1(Form1Template):
      self.image_4.source = image_source_2
      self.image_4.visible = True
      self.image_1.visible = False
+  def form_show(self, **event_args):
+    # Set the minimum and maximum values of the slider
+    self.slider_1.min = 0
+    self.slider_1.max = 100
+    
+    # Set the initial value of the slider
+    self.slider_1.start = [10]  # Use a list for multiple handles if needed
+    
+    # Set the step value to determine the increments
+    self.slider_1.step = 10
+    
+    # Optionally, set the format for displaying the value
+    self.slider_1.format = "{:.0f}"
+
+  def slider_1_change(self, **event_args):
+    # Get the current value of the slider
+    slider_value = self.slider_1.value
+    
+    # Reset visibility of images and labels
+    self.image_4.visible = False
+    self.image_a.visible = False
+    self.image_6.visible = False
+    self.label_4_im.text = ""
+    self.label_a_im.text = ""
+    self.label_6_im.text = ""
+    
+    # Determine the visibility based on the slider's value
+    if slider_value > 30:
+        self.image_4.source = '_/theme/hen.gif'
+        self.image_4.visible = True
+        self.label_4_im.text = "Thanks"
+      
+        
+    if slider_value > 90:  # Replace with the value you choose
+        self.image_6.source = '_/theme/hen4.gif'
+        self.image_6.visible = True
+        self.label_6_im.text = "Coming"
 
    
 def change_image(self):
