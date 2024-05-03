@@ -6,6 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import datetime
+from anvil import Button, Image
 
 class Form1(Form1Template):
   def __init__(self, **properties):
@@ -38,6 +39,13 @@ class Form1(Form1Template):
     self.infoAbtPin.visible=True
     self.count_click += 1
     self.infoAbtPin.text= 'You have clicked a pin ' + str(self.count_click) + ' time'
+  
+  # Hide the wall elements and reset the wall label to the name of the location
+    self.label_b.text = sender.tag['Name']  # Update this line to set the wall label
+    self.label_b.visible = False
+    self.repeating_panel_1.visible = False
+    self.label_b.visible = True
+    self.repeating_panel_1.visible = False
     if self.count_click > 1:
       self.infoAbtPin.text += 's'
       self.pictures = tables.app_tables.images.search(Location=sender.tag)
@@ -95,5 +103,24 @@ class Form1(Form1Template):
   def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
         alert("Baby Bevo wasn't a regular Bevo. He was a little squishmallow Bevo.")
+# Assuming you have two different images to switch between
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.image_4.source = image_source_1
+    self.image_4.visible = True
+
+  def button_4_click(self, **event_args):
+     self.image_4.source = image_source_2
+     self.image_4.visible = True
   
+
+    
+def change_image(self):
+    """This method is called when the button is clicked"""
+    self.image_4.source = '_/theme/hen.gif'
+    self.image_4.visible = True
+image_source_1 = "_/theme/giphy.gif"
+image_source_2 = "_/theme/tenor.gif" 
+image_source_3 = "_/theme/hen.gif" 
 

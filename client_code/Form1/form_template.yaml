@@ -17,27 +17,27 @@ components:
     type: GridPanel
     layout_properties: {grid_position: 'VSBPEI,UIVDSI'}
     components:
-    - name: button_2
-      properties: {text: What is a 'Baby Bevo", background: 'theme:Secondary Container',
-        foreground: 'theme:Primary', icon: '', font: c}
-      type: Button
-      layout_properties: {row: XEDEOX, width_xs: 2, col_xs: 1}
-      event_bindings: {click: button_2_click}
     - name: welcomeLbl
       properties: {text: BABY BEVO'S SKY HIGH ADVENTURE, font_size: 22, align: center,
         tooltip: welcome noobs, font: c}
       type: Label
       layout_properties: {row: XEDEOX, width_xs: 6, col_xs: 3}
+    - name: button_2
+      properties: {text: What is a 'Baby Bevo", background: 'theme:Secondary Container',
+        foreground: 'theme:Primary', icon: '', font: c}
+      type: Button
+      layout_properties: {row: DSUSBR, width_xs: 3, col_xs: 2}
+      event_bindings: {click: button_2_click}
     - name: button_1
       properties: {text: 'Where is Baby Bevo Going?', background: 'theme:Secondary
           Container', foreground: '', font: c}
       type: Button
-      layout_properties: {row: XEDEOX, width_xs: 2, col_xs: 9}
+      layout_properties: {row: DSUSBR, width_xs: 3, col_xs: 7}
       event_bindings: {click: button_1_click}
     - name: map_1
       properties: {height: 391, map_type_control: false, max_zoom: 15, zoom: null}
       type: GoogleMap
-      layout_properties: {row: TLBSIC, width_xs: 10, col_xs: 1}
+      layout_properties: {row: TLBSIC, width_xs: 12, col_xs: 0}
       event_bindings: {bounds_changed: map_1_bounds_changed}
     - name: infoAbtPin
       properties: {visible: false}
@@ -62,44 +62,67 @@ components:
       layout_properties: {row: SYNNGE, width_xs: 1, col_xs: 7}
       event_bindings: {click: right_btn_click}
     - name: label_3
-      properties: {text: Sign My Wall!, visible: true, align: center, font_size: 35}
+      properties: {text: Go on Baby Bevo's Adventure and tell us what you think in the wall below!,
+        visible: true, align: center, font_size: 35, font: C}
       type: Label
       layout_properties: {row: LNBCSW, width_xs: 12, col_xs: 0}
     - name: label_4
-      properties: {visible: true, text: 'Name:', align: right}
+      properties: {visible: true, text: 'Name:', align: right, font: C}
       type: Label
-      layout_properties: {row: UXPORD, width_xs: 1, col_xs: 2}
+      layout_properties: {row: UXPORD, width_xs: 1, col_xs: 4}
     - name: label_6
-      properties: {text: Comments}
+      properties: {text: 'Comments:', font: C}
       type: Label
-      layout_properties: {row: UXPORD, width_xs: 1, col_xs: 8}
+      layout_properties: {row: UXPORD, width_xs: 1, col_xs: 7}
     - name: text_box_1
-      properties: {visible: true}
+      properties: {visible: true, font: C}
       type: TextBox
-      layout_properties: {row: OZNOXQ, width_xs: 3, col_xs: 1}
+      layout_properties: {row: OZNOXQ, width_xs: 3, col_xs: 3}
       event_bindings: {pressed_enter: signBtn_click}
     - name: text_box_2
-      properties: {}
+      properties: {font: C}
       type: TextBox
-      layout_properties: {row: OZNOXQ, width_xs: 3, col_xs: 7}
+      layout_properties: {row: OZNOXQ, width_xs: 3, col_xs: 6}
     - name: signBtn
-      properties: {text: Sign!, visible: true, background: ''}
+      properties: {text: Sign!, visible: true, background: 'theme:Secondary Container',
+        bold: true, font: C}
       type: Button
-      layout_properties: {row: MTBVWI, width_xs: 3, col_xs: 4}
+      layout_properties: {row: MTBVWI, width_xs: 2, col_xs: 5}
       event_bindings: {click: signBtn_click}
     - name: wallLbl
-      properties: {text: 'My Wall:', visible: true, font_size: 35, align: center}
+      properties: {text: 'My Wall:', visible: true, font_size: 35, align: center,
+        font: C, border: '', background: '#9fdfd2'}
       type: Label
-      layout_properties: {row: TNVLHZ, width_xs: 3, col_xs: 4}
+      layout_properties: {row: TNVLHZ, width_xs: 2, col_xs: 5}
+    - name: label_A
+      properties: {text: At Location, font: C}
+      type: Label
+      layout_properties: {row: IOOWPV, width_xs: 2, col_xs: 4}
+    - name: label_b
+      properties: {font: C}
+      type: Label
+      layout_properties: {row: IOOWPV, width_xs: 1, col_xs: 6}
     - name: repeating_panel_1
       properties: {item_template: Form1.ItemTemplate1}
       type: RepeatingPanel
       layout_properties: {row: HBVYGW, width_xs: 12, col_xs: 0}
+    - name: button_3
+      properties: {text: I went on the adventure!!!, background: 'theme:Secondary
+          Container', foreground: 'theme:Primary', icon: 'fa:smile-o', font: c}
+      type: Button
+      layout_properties: {row: DOITWE, width_xs: 3, col_xs: 2}
+      event_bindings: {click: button_3_click}
+    - name: button_4
+      properties: {text: I'm lame. I didn''t, background: 'theme:Secondary Container',
+        foreground: 'theme:Primary', icon: 'fa:frown-o', font: c}
+      type: Button
+      layout_properties: {row: DOITWE, width_xs: 3, col_xs: 7}
+      event_bindings: {click: button_4_click}
+    - name: image_4
+      properties: {height: 295.99993896484375}
+      type: Image
+      layout_properties: {row: CZSRBL, width_xs: 6, col_xs: 3}
     - name: column_panel_2
       properties: {}
       type: ColumnPanel
       layout_properties: {row: OKHJBS, width_xs: 12, col_xs: 0}
-  - name: canvas_1
-    properties: {height: 100, visible: true}
-    type: Canvas
-    layout_properties: {grid_position: 'YEYOZK,LARNCH'}
