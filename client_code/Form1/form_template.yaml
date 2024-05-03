@@ -47,14 +47,14 @@ components:
       properties: {text: '', icon: 'fa:arrow-circle-left', icon_align: top, align: right,
         spacing_above: large, spacing_below: large, font_size: 28, tooltip: see another picture from the left}
       type: Button
-      layout_properties: {row: SYNNGE, width_xs: 2, col_xs: 0}
+      layout_properties: {row: SYNNGE, width_xs: 1, col_xs: 0}
       event_bindings: {click: left_btn_click}
       data_bindings: []
     - name: image_1
       properties: {visible: false, height: 239.99993896484375, horizontal_align: left,
         vertical_align: bottom}
       type: Image
-      layout_properties: {row: SYNNGE, width_xs: 6, col_xs: 3}
+      layout_properties: {row: SYNNGE, width_xs: 9, col_xs: 1}
     - name: right_btn
       properties: {text: '', icon: 'fa:arrow-circle-right', align: left, icon_align: left_edge,
         spacing_above: large, spacing_below: small, font_size: 28, tooltip: see another picture from the right}
