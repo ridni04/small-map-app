@@ -118,7 +118,7 @@ components:
       type: Button
       layout_properties: {row: DOITWE, width_xs: 3, col_xs: 7}
       event_bindings: {click: button_4_click}
-    - name: image_4
+    - name: image_3
       properties: {height: 295.99993896484375}
       type: Image
       layout_properties: {row: CZSRBL, width_xs: 6, col_xs: 3}
@@ -132,10 +132,18 @@ components:
       type: form:dep_1bbojh6tx9f61:Slider
       layout_properties: {row: DADPNZ, width_xs: 12, col_xs: 0}
       event_bindings: {change: slider_1_change}
-    - name: image_3
+    - name: image_4
       properties: {height: 252.6666259765625}
       type: Image
+      layout_properties: {row: LSBMHP, width_xs: 3, col_xs: 2}
+    - name: image_5
+      properties: {height: 252}
+      type: Image
       layout_properties: {row: LSBMHP, width_xs: 3, col_xs: 5}
+    - name: image_6
+      properties: {height: 255.333251953125}
+      type: Image
+      layout_properties: {row: LSBMHP, width_xs: 3, col_xs: 8}
     - name: column_panel_2
       properties: {}
       type: ColumnPanel
