@@ -76,11 +76,11 @@ class Form1(Form1Template):
 
   def right_btn_click(self, **event_args):
     self.count_click += 1
-    self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['Image']
+    self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['ID']
 
   def left_btn_click(self, **event_args):
     self.count_click -= 1
-    self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['Image']
+    self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['ID']
 
 
   def map_1_bounds_changed(self, **event_args):
@@ -146,18 +146,16 @@ image_source_1 = "_/theme/giphy.gif"
 image_source_2 = "_/theme/tenor.gif" 
 image_source_3 = "_/theme/hen.gif" 
 
-# Event handler for when an image is selected
-def on_image_selected(self, **event_args):
-    # Assuming 'selected_image_id' is the ID of the selected image
-    selected_image_id = self.images_table.selected_row['id'] # Retrieve this from your app logic
-
-    # Search for the image in the 'images' table by its ID
-    selected_image = app_tables.images.get(id=image_id)
-
-    # Check if the image was found
+def change_image_2(self):
+    """This method is called when the button is clicked"""
+    # Assuming image_1's source is set to the selected image's source
+    selected_image_id = self.image_1.source.split('/')[-1].split('.')[0]
+    selected_image = app_tables.images.get('ID')
+    
     if selected_image:
-        # Update the label's text with the caption from the 'captions' column
-        self.label_r.text = selected_image['caption']
+        self.label_r.text = selected_image['Caption']
+        self.label_r.visible = True  
     else:
-        # If the image is not found, display a default message or handle the error
         self.label_r.text = "Caption not found."
+        self.label_r.visible = True  
+
