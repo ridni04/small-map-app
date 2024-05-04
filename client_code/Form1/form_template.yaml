@@ -62,7 +62,7 @@ components:
       layout_properties: {row: SYNNGE, width_xs: 1, col_xs: 7}
       event_bindings: {click: right_btn_click}
     - name: label_r
-      properties: {align: center}
+      properties: {align: center, visible: true}
       type: Label
       layout_properties: {row: IXZOGC, width_xs: 6, col_xs: 3}
     - name: label_3

@@ -31,6 +31,15 @@ class Form1(Form1Template):
   
 
   def marker_click(self, sender, **properties):
+    self.pictures = app_tables.images.search(Location=sender.tag)    
+    for i, picture in enumerate(self.pictures):
+        if (i + 1) % 3 == 0:  # Check if the index + 1 is a multiple of 3
+            self.image_1.style = 'width: 150%; height: auto;'  # Enlarge the image
+        else:
+            self.image_1.style = 'width: 100%; height: auto;'  # Normal size for other images
+        
+        # Set the source of the image to the current picture
+        self.image_1.source = picture['ID']
     self.infoAbtPin.visible=True
     self.count_click += 1
     self.infoAbtPin.text= 'You have clicked a pin ' + str(self.count_click) + ' time'
@@ -44,6 +53,14 @@ class Form1(Form1Template):
       self.infoAbtPin.text += 's'
       self.pictures = tables.app_tables.images.search(Location=sender.tag)
       self.location = sender.tag
+    for picture in self.pictures:
+        if picture['ID'] == 'specific_image_id':  # Replace with the actual ID of the image you want to enlarge
+            self.image_1.style = 'width: 150%; height: auto;'  # Increase the size by 50%
+        else:
+            self.image_1.style = 'width: 100%; height: auto;'  # Normal size for other images
+    
+    # Set the source of the image to the first picture in the list
+    self.image_1.source = self.pictures[0]['ID']
 
     self.infoAbtPin.text += '\nThis pin\'s location is '+str(sender.tag['Lat'])+' North, '+str(sender.tag['Lon']) + ' West'
     self.infoAbtPin.text += '\nIt is called ' + sender.tag['Name']
@@ -52,6 +69,8 @@ class Form1(Form1Template):
     self.pictures = tables.app_tables.images.search(Location=sender.tag)
     self.location = sender.tag
     self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['ID']
+  
+
   
 
   def signBtn_click(self, **event_args):
@@ -146,16 +165,5 @@ image_source_1 = "_/theme/giphy.gif"
 image_source_2 = "_/theme/tenor.gif" 
 image_source_3 = "_/theme/hen.gif" 
 
-def change_image_2(self):
-    """This method is called when the button is clicked"""
-    # Assuming image_1's source is set to the selected image's source
-    selected_image_id = self.image_1.source.split('/')[-1].split('.')[0]
-    selected_image = app_tables.images.get('ID')
-    
-    if selected_image:
-        self.label_r.text = selected_image['Caption']
-        self.label_r.visible = True  
-    else:
-        self.label_r.text = "Caption not found."
-        self.label_r.visible = True  
+
 
