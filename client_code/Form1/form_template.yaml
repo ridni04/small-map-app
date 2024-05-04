@@ -61,6 +61,10 @@ components:
       type: Button
       layout_properties: {row: SYNNGE, width_xs: 1, col_xs: 7}
       event_bindings: {click: right_btn_click}
+    - name: label_r
+      properties: {}
+      type: Label
+      layout_properties: {row: IXZOGC, width_xs: 2, col_xs: 5}
     - name: label_3
       properties: {text: Go on Baby Bevo's Adventure and tell us what you think in the wall below!,
         visible: true, align: center, font_size: 35, font: C}
