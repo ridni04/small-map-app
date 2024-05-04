@@ -9,8 +9,9 @@ services:
   server_config: {}
 package_name: Small_Map_App
 allow_embedding: false
-name: Clone of Small Map App (2)
+name: Baby Bevo Sky High Adventure
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
+metadata: {title: Baby Bevo's Adventure, logo_img: 'asset:Squishmallows-Wilfred-Longhorn-Cow-Brown-8-Inch-Plush-Monogrammed-Silver-Sparkly-B-On-Belly-Pink-Nostrils-Valentine-s-Squad-2023-Wilderness-Bull-Stuf_7b69b560-7a7d-4309-904e-d697a960704b.de612422.webp'}
 startup_form: Form1
 native_deps: {head_html: '<link rel="preconnect" href="https://fonts.gstatic.com"
     crossorigin>

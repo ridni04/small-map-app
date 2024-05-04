@@ -53,14 +53,6 @@ class Form1(Form1Template):
       self.infoAbtPin.text += 's'
       self.pictures = tables.app_tables.images.search(Location=sender.tag)
       self.location = sender.tag
-    for picture in self.pictures:
-        if picture['ID'] == 'specific_image_id':  # Replace with the actual ID of the image you want to enlarge
-            self.image_1.style = 'width: 150%; height: auto;'  # Increase the size by 50%
-        else:
-            self.image_1.style = 'width: 100%; height: auto;'  # Normal size for other images
-    
-    # Set the source of the image to the first picture in the list
-    self.image_1.source = self.pictures[0]['ID']
 
     self.infoAbtPin.text += '\nThis pin\'s location is '+str(sender.tag['Lat'])+' North, '+str(sender.tag['Lon']) + ' West'
     self.infoAbtPin.text += '\nIt is called ' + sender.tag['Name']
@@ -120,13 +112,14 @@ class Form1(Form1Template):
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.image_4.source = image_source_1
-    self.image_4.visible = True
+    self.image_3.source = image_source_1
+    self.image_3.visible = True
 
   def button_4_click(self, **event_args):
-     self.image_4.source = image_source_2
-     self.image_4.visible = True
-     self.image_1.visible = False
+    """This method is called when the button is clicked"""
+    self.image_3.source = image_source_2
+    self.image_3.visible = True
+
   def form_show(self, **event_args):
     self.slider_1.min = 0
     self.slider_1.max = 100
@@ -139,22 +132,25 @@ class Form1(Form1Template):
     slider_value = self.slider_1.value
     
     self.image_4.visible = False
-    self.image_a.visible = False
+    self.image_5.visible = False
     self.image_6.visible = False
-    self.label_4_im.text = ""
-    self.label_a_im.text = ""
-    self.label_6_im.text = ""
+    self.label_4a.text = ""
+    self.label_5a.text = ""
+    self.label_6a.text = ""
     
     if slider_value > 30:
         self.image_4.source = '_/theme/hen.gif'
         self.image_4.visible = True
-        self.label_4_im.text = "Thanks"
-      
+        self.label_4a.text = "Thanks"
+    if slider_value > 60:
+        self.image_5.source = '_/theme/hen2.gif'
+        self.image_5.visible = True
+        self.label_5a.text = "For"      
         
     if slider_value > 90:  
         self.image_6.source = '_/theme/hen4.gif'
         self.image_6.visible = True
-        self.label_6_im.text = "Coming"
+        self.label_6a.text = "Coming"
 
    
 def change_image(self):
