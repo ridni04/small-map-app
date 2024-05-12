@@ -100,8 +100,23 @@ class Form1(Form1Template):
 
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.outlined_button_1.background = 'lightblue'
-    self.outlined_button_1.text = "Baby Bevo wasn't a regular Bevo. He was a little squishmallow Bevo."
+    self.switch_to_form2(**event_args)
+ 
+  def switch_to_form2(self, **event_args):
+    # This method will be called when outlined_button_3 is clicked
+    
+    # Open Form2
+    open_form('Form2')
+    
+  def button_5_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.switch_to_sorry(**event_args)
+ 
+  def switch_to_sorry(self, **event_args):
+    # This method will be called when outlined_button_3 is clicked
+    
+    # Open Sorry
+    open_form('Sorry')
 
   def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""

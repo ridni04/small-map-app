@@ -1,0 +1,56 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: outlined_button_1
+    properties: {text: outlined_button_1, role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'PYQWAW,DCEDNK'}
+  - name: image_1
+    properties: {height: 455.33331298828125, display_mode: fill_width}
+    type: Image
+    layout_properties: {grid_position: 'CZFISO,XUSGIC'}
+  - name: button_1
+    properties: {text: S, background: '#e0c7ff', foreground: 'theme:On Primary', bold: true,
+      font: C, font_size: 25}
+    type: Button
+    layout_properties: {grid_position: 'FAWYNH,UCENIE'}
+    event_bindings: {click: button_1_click}
+  - name: button_2
+    properties: {text: O, background: '#e0c7ff', foreground: 'theme:On Primary', font: C,
+      font_size: 25}
+    type: Button
+    layout_properties: {grid_position: 'WEJXBV,FZAVRG'}
+  - name: button_3
+    properties: {text: R, background: '#e0c7ff', foreground: 'theme:On Primary', font: C,
+      font_size: 25}
+    type: Button
+    layout_properties: {grid_position: 'EIBABT,YOFJSI'}
+    event_bindings: {click: button_3_click}
+  - name: button_4
+    properties: {text: R, background: '#e0c7ff', foreground: 'theme:On Primary', font: C,
+      font_size: 25}
+    type: Button
+    layout_properties: {grid_position: 'VQCMUY,ZCCJLP'}
+  - name: button_5
+    properties: {text: Y, background: '#e0c7ff', foreground: 'theme:On Primary', font: C,
+      font_size: 25}
+    type: Button
+    layout_properties: {grid_position: 'UYMBKH,SIPJNV'}
+  - name: button_6
+    properties: {text: ALL DONE, background: '#e0c7ff', foreground: 'theme:On Primary',
+      font: c, bold: true, font_size: 35}
+    type: Button
+    layout_properties: {grid_position: 'EVZQCS,TFMKPR'}
+    event_bindings: {click: button_6_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components: []
