@@ -1,0 +1,19 @@
+container: {type: ColumnPanel}
+components:
+- name: image_1
+  properties: {height: 467.6666259765625}
+  type: Image
+  layout_properties: {grid_position: 'QJVXAV,RECLTV'}
+- name: button_1
+  properties: {text: I'M}
+  type: Button
+  layout_properties: {grid_position: 'PQBZNY,MMKMUE'}
+- name: button_2
+  properties: {text: SORRY, icon: ''}
+  type: Button
+  layout_properties: {grid_position: 'DQRXXM,UXQWWK'}
+- name: button_3
+  properties: {text: MOM}
+  type: Button
+  layout_properties: {grid_position: 'KAITTD,SYLFGH'}
+is_package: true

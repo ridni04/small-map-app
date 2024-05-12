@@ -12,7 +12,7 @@ package_name: Small_Map_App
 allow_embedding: false
 name: Mother's day Website
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
-metadata: {title: '', logo_img: 'asset:icon.png'}
+metadata: {title: '', logo_img: 'asset:icon2.png'}
 startup_form: null
 native_deps: {head_html: '<link rel="preconnect" href="https://fonts.gstatic.com"
     crossorigin>

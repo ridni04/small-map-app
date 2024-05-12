@@ -13,7 +13,7 @@ class Form2(Form2Template):
         
         # Bind the click event of outlined_button_3 to the method
         self.outlined_button_3.set_event_handler('click', self.switch_to_form1)
-        self.outlined_button_2.set_event_handler('click', self.outlined_button_2_click)
+        self.outlined_button_4.set_event_handler('click', self.switch_to_sorry)
       
         
     def switch_to_form1(self, **event_args):
@@ -21,6 +21,11 @@ class Form2(Form2Template):
         
         # Open Form1
         open_form('Form1')
+    def switch_to_sorry(self, **event_args):
+        # This method will be called when outlined_button_3 is clicked
+        
+        # Open Form1
+        open_form('Sorry')
 
     def outlined_button_1_click(self, **event_args):
         """This method is called when the button is clicked"""

@@ -11,7 +11,7 @@ from anvil import Button, Image
 class Form1(Form1Template):
   def __init__(self, **properties):
     self.init_components(**properties)
-    self.outlined_button_1.set_event_handler('click', self.switch_to_form2())
+    self.outlined_button_1.set_event_handler('click', self.switch_to_form2)
   def switch_to_form2(self, **event_args):
         # This method will be called when outlined_button_3 is clicked
         
