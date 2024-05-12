@@ -24,7 +24,7 @@ components:
     layout_properties: {grid_position: 'AGQLZH,ZGLBTE'}
     event_bindings: {click: outlined_button_1_click}
   - name: outlined_button_2
-    properties: {text: Today is May 13th, role: outlined-button, background: 'theme:On
+    properties: {text: Today is JUST May 12th, role: outlined-button, background: 'theme:On
         Primary', font: c, icon: 'fa:heart'}
     type: Button
     layout_properties: {grid_position: 'USHYGI,JSHLEJ'}

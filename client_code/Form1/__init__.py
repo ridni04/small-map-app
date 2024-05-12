@@ -28,6 +28,9 @@ class Form1(Form1Template):
       self.markerList[ind].add_event_handler('click',self.marker_click)
       self.map_1.add_component(self.markerList[ind])
       ind += 1
+        
+        # Adjust the width of image_7
+    
   
 
   def marker_click(self, sender, **properties):
@@ -150,7 +153,6 @@ class Form1(Form1Template):
         self.image_6.visible = True
         self.label_6a.text = "Day!"
 
-   
 
 image_source_1 = "_/theme/R.gif"
 image_source_2 = "_/theme/giphy (1).gif" 

@@ -47,24 +47,24 @@ components:
       properties: {text: '', icon: 'fa:arrow-circle-left', icon_align: top, align: right,
         spacing_above: large, spacing_below: large, font_size: 28, tooltip: see another picture from the left}
       type: Button
-      layout_properties: {row: SYNNGE, width_xs: 1, col_xs: 4}
+      layout_properties: {row: PLAHZV, width_xs: 1, col_xs: 3}
       event_bindings: {click: left_btn_click}
       data_bindings: []
     - name: image_1
-      properties: {visible: false, height: 239.99993896484375, horizontal_align: left,
-        vertical_align: bottom}
+      properties: {visible: false, height: 102.6666259765625, horizontal_align: left,
+        vertical_align: bottom, display_mode: original_size}
       type: Image
-      layout_properties: {row: SYNNGE, width_xs: 2, col_xs: 5}
+      layout_properties: {row: PLAHZV, width_xs: 5, col_xs: 4}
     - name: right_btn
       properties: {text: '', icon: 'fa:arrow-circle-right', align: left, icon_align: left_edge,
         spacing_above: large, spacing_below: small, font_size: 28, tooltip: see another picture from the right}
       type: Button
-      layout_properties: {row: SYNNGE, width_xs: 1, col_xs: 7}
+      layout_properties: {row: PLAHZV, width_xs: 1, col_xs: 9}
       event_bindings: {click: right_btn_click}
     - name: label_r
       properties: {align: center, visible: true}
       type: Label
-      layout_properties: {row: IXZOGC, width_xs: 6, col_xs: 3}
+      layout_properties: {row: IXZOGC, width_xs: 5, col_xs: 4}
     - name: label_3
       properties: {text: Tell us what these photo remind you of Mom!, visible: true,
         align: center, font_size: 35, font: C}
