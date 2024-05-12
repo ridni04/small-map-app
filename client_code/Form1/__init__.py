@@ -11,6 +11,8 @@ from anvil import Button, Image
 class Form1(Form1Template):
   def __init__(self, **properties):
     self.init_components(**properties)
+    self.outlined_button_3.set_event_handler('click', self.switch_to_form1)
+
     # Any code you write here will run before the form opens.
     self.count_click = 0
   
