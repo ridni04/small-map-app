@@ -5,15 +5,19 @@ components:
   type: Image
   layout_properties: {grid_position: 'QJVXAV,RECLTV'}
 - name: button_1
-  properties: {text: I'M}
+  properties: {text: I'M, background: '#e0c7ff', foreground: 'theme:On Primary', font: c,
+    font_size: 80}
   type: Button
   layout_properties: {grid_position: 'PQBZNY,MMKMUE'}
 - name: button_2
-  properties: {text: SORRY, icon: ''}
+  properties: {text: SORRY, icon: '', background: '#e0c7ff', foreground: 'theme:On
+      Primary', font: c, font_size: 80}
   type: Button
   layout_properties: {grid_position: 'DQRXXM,UXQWWK'}
 - name: button_3
-  properties: {text: MOM}
+  properties: {text: "\ud83d\udc97MOM\ud83d\udc97", background: '#e0c7ff', font: C,
+    font_size: 80, foreground: 'theme:On Primary'}
   type: Button
   layout_properties: {grid_position: 'KAITTD,SYLFGH'}
+  data_bindings: []
 is_package: true
