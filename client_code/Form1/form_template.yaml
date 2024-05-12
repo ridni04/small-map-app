@@ -29,7 +29,7 @@ components:
       layout_properties: {row: DSUSBR, width_xs: 3, col_xs: 2}
       event_bindings: {click: button_2_click}
     - name: button_1
-      properties: {text: Mom Since 2010!, background: '#e0c7ff', foreground: 'theme:On
+      properties: {text: Mom Since 2010, background: '#e0c7ff', foreground: 'theme:On
           Primary', font: c}
       type: Button
       layout_properties: {row: DSUSBR, width_xs: 3, col_xs: 7}

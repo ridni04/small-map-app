@@ -107,9 +107,7 @@ class Form1(Form1Template):
   def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
         alert("Wow!!!")
-        self.button_2.background = image_source_3
-        self.button_2.style = {'border': 'none', 'padding': '0', 'background-size': 'cover'}
-        self.button_2.text = 'Mom since 2004!'  # 
+
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.image_3.source = image_source_1
@@ -153,14 +151,10 @@ class Form1(Form1Template):
         self.label_6a.text = "Day!"
 
    
-def change_image(self):
-    """This method is called when the button is clicked"""
-    self.image_4.source = '_/theme/hen.gif'
-    self.image_4.visible = True
+
 image_source_1 = "_/theme/R.gif"
 image_source_2 = "_/theme/giphy (1).gif" 
-image_source_3 = "_/theme/momm.png"
-image_source_4 = ""
+
 
 
 
