@@ -66,7 +66,7 @@ components:
       type: Label
       layout_properties: {row: IXZOGC, width_xs: 6, col_xs: 3}
     - name: label_3
-      properties: {text: Tell us whatthese photo remind you of Mom!, visible: true,
+      properties: {text: Tell us what these photo remind you of Mom!, visible: true,
         align: center, font_size: 35, font: C}
       type: Label
       layout_properties: {row: LNBCSW, width_xs: 12, col_xs: 0}
@@ -93,11 +93,6 @@ components:
       type: Button
       layout_properties: {row: MTBVWI, width_xs: 2, col_xs: 5}
       event_bindings: {click: signBtn_click}
-    - name: wallLbl
-      properties: {text: 'My Wall:', visible: true, font_size: 35, align: center,
-        font: C, border: '', background: '#9fdfd2'}
-      type: Label
-      layout_properties: {row: TNVLHZ, width_xs: 2, col_xs: 5}
     - name: label_A
       properties: {text: At Location, font: C}
       type: Label
