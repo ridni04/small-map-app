@@ -155,6 +155,10 @@ components:
       properties: {align: center, font: c, font_size: 25}
       type: Label
       layout_properties: {row: SMHWUH, width_xs: 3, col_xs: 8}
+    - name: outlined_button_1
+      properties: {text: outlined_button_1, role: outlined-button}
+      type: Button
+      layout_properties: {row: DYORVO, width_xs: 5, col_xs: 4}
     - name: column_panel_2
       properties: {}
       type: ColumnPanel
