@@ -33,13 +33,14 @@ class Form1(Form1Template):
   def marker_click(self, sender, **properties):
     self.pictures = app_tables.images.search(Location=sender.tag)    
     for i, picture in enumerate(self.pictures):
-        if (i + 1) % 3 == 0:  # Check if the index + 1 is a multiple of 3
-            self.image_1.style = 'width: 150%; height: auto;'  # Enlarge the image
-        else:
-            self.image_1.style = 'width: 100%; height: auto;'  # Normal size for other images
-        
         # Set the source of the image to the current picture
         self.image_1.source = picture['ID']
+        
+    if (len(self.pictures) + 1) % 3 == 0:  # Check if the number of images is a multiple of 3
+        self.image_1.style = 'width: 150%; height: auto;'  # Enlarge the image
+    else:
+        self.image_1.style = 'width: 100%; height: auto;'  # Normal size for other images
+    
     self.infoAbtPin.visible=True
     self.count_click += 1
     self.infoAbtPin.text= 'You have clicked a pin ' + str(self.count_click) + ' time'
@@ -50,9 +51,9 @@ class Form1(Form1Template):
     self.label_b.visible = True
     self.repeating_panel_1.visible = False
     if self.count_click > 1:
-      self.infoAbtPin.text += 's'
-      self.pictures = tables.app_tables.images.search(Location=sender.tag)
-      self.location = sender.tag
+        self.infoAbtPin.text += 's'
+        self.pictures = tables.app_tables.images.search(Location=sender.tag)
+        self.location = sender.tag
 
     self.infoAbtPin.text += '\nThis pin\'s location is '+str(sender.tag['Lat'])+' North, '+str(sender.tag['Lon']) + ' West'
     self.infoAbtPin.text += '\nIt is called ' + sender.tag['Name']
@@ -61,9 +62,6 @@ class Form1(Form1Template):
     self.pictures = tables.app_tables.images.search(Location=sender.tag)
     self.location = sender.tag
     self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['ID']
-  
-
-  
 
   def signBtn_click(self, **event_args):
     if len(self.text_box_1.text.strip())>0:
@@ -104,12 +102,14 @@ class Form1(Form1Template):
 
   def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        alert("This Squishmallow Bevo had dreams. He wanted to go to the top of UT Tower! But Baby Bevo wasn't allowed in the tower, so Baby Bevo decided to go up all the buildings on Campus!")
+        alert("https://photos.app.goo.gl/WtcpCUbHuJi2SJEi6")
 
   def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
-        alert("Baby Bevo wasn't a regular Bevo. He was a little squishmallow Bevo.")
-
+        alert("Wow!!!")
+        self.button_2.background = image_source_3
+        self.button_2.style = {'border': 'none', 'padding': '0', 'background-size': 'cover'}
+        self.button_2.text = 'Mom since 2004!'  # 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.image_3.source = image_source_1
@@ -139,27 +139,28 @@ class Form1(Form1Template):
     self.label_6a.text = ""
     
     if slider_value > 30:
-        self.image_4.source = '_/theme/hen.gif'
+        self.image_4.source = '_/theme/MOMG1.gif'
         self.image_4.visible = True
-        self.label_4a.text = "Thanks"
+        self.label_4a.text = "Happy"
     if slider_value > 60:
-        self.image_5.source = '_/theme/hen2.gif'
+        self.image_5.source = '_/theme/momg2.gif'
         self.image_5.visible = True
-        self.label_5a.text = "For"      
+        self.label_5a.text = "Mothers"      
         
     if slider_value > 90:  
-        self.image_6.source = '_/theme/hen4.gif'
+        self.image_6.source = '_/theme/momg3.gif'
         self.image_6.visible = True
-        self.label_6a.text = "Coming"
+        self.label_6a.text = "Day!"
 
    
 def change_image(self):
     """This method is called when the button is clicked"""
     self.image_4.source = '_/theme/hen.gif'
     self.image_4.visible = True
-image_source_1 = "_/theme/giphy.gif"
-image_source_2 = "_/theme/tenor.gif" 
-image_source_3 = "_/theme/hen.gif" 
+image_source_1 = "_/theme/R.gif"
+image_source_2 = "_/theme/giphy (1).gif" 
+image_source_3 = "_/theme/momm.png"
+image_source_4 = ""
 
 
 
