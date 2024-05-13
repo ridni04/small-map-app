@@ -9,6 +9,7 @@ components:
     font_size: 80}
   type: Button
   layout_properties: {grid_position: 'PQBZNY,MMKMUE'}
+  event_bindings: {click: button_1_click}
 - name: button_2
   properties: {text: SORRY, icon: '', background: '#e0c7ff', foreground: 'theme:On
       Primary', font: c, font_size: 80}
